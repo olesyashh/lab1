@@ -1,0 +1,62 @@
+лаба1 
+1) min = int(input())
+sms = int(input())
+x = 0
+y = 0
+z = 0
+if min > 50:  
+    x = (min-50)*2.5    
+  print(0)
+else:    
+  min = min
+if sms > 50:    
+  y = (sms- 50)*1.5
+else:    sms = sms
+z = (150 + y + 4.4 + x)*1.05
+print("%.2f" %z)
+
+
+2) nain = int(input())
+if 0 <= nain <=7.8:  
+  print(0)
+elif 7.8 <nain <11.2:  
+  print(1)
+elif 11.2 <= nain <=16.4:  
+  print(2)
+elif nain>16.4:  
+  print(3)
+else:  
+  print("error")
+
+3) nain = str(input())
+if "ing" in nain:    
+  nain = nain + "ly"    
+ print(nain)  
+elif len(nain) >= 3:    
+  nain = nain + "ing"    
+  print(nain)
+else:    
+ print(nain) 
+
+4) mail = str(input("Введите почту:
+domen = mail[mail.find(\"@\")+1" "))
+domen = mail[mail.find("@")+1:]
+print(domen)
+
+5) nain = str(input())
+nain = nain.replace("-",":)")
+nain = nain.replace(":",":)")
+nain = nain.replace(",",":)")
+nain = nain.replace(".",":)")
+print(nain)
+
+6) prod = str(input("Введите продукт: "))
+vol = str(input("Введите объем: "))
+id = prod[:3].upper()+vol[:vol.find("ml")]
+print(id)
+
+7) nain = str(input())
+if nain.isnumeric() and len(nain) in (4, 6):    
+  print("false")
+else:    
+  print("true")
