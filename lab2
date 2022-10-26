@@ -1,0 +1,54 @@
+1) nain = str(input())
+words = nain.split()
+my_list = [len(word) for word in words]
+resylt = min(my_list) + max(my_list)
+print(words)
+print(my_list)
+print("сумма максимального и миниманого значения длин слов : ")
+
+2) numbers = [2,3,4,5,6,7]
+x = min(numbers)
+y = max(numbers)
+for i in range(len(numbers)):
+   if numbers[i] %2==0:
+       numbers[i]*=x
+   else:
+       numbers[i]*=y
+print("максимальный элемент", y)
+print("минимальный элемент", x)
+print(numbers)
+
+3) n = int(input("Введите количество элементов списка: "))
+n_min = int(input("Введите минимальный порог: "))
+n_max = int(input("Введите максимальный порог: "))
+kol = 0
+from random import uniform
+Ist_random = [uniform(-10,10) for i in range(n)]
+print(Ist_random)
+print("Количество подходящих чисел: ", kol)
+
+4) Ist_numbers = list(map(int, input('Введите числа через пробел: ').split()))
+if len(Ist_numbers) <4:
+   print ("Вы ввели меньше 4 чисел")
+   quit()
+Ist_no_exstremum = [Ist_number for Ist_number in Ist_numbers if Ist_number != max(Ist_numbers) and Ist_number != min(Ist_numbers)]
+print(Ist_numbers)
+print(Ist_no_exstremum)
+
+5) n = int(input("Введите количество моряков: "))
+team1 = []
+team2 =[]
+for i in range (n) :
+   nameage = input().split()
+   name = nameage[0]
+   age = int(nameage[1])
+   if age > 40 or age < 20:
+       team1.append(name)
+   else:
+       team2.append(name)
+team1.sort()
+team2.sort()
+print("Команда 1:", end=' ')
+print(*team1, sep=', ')
+print("Команда 2:", end=' ')
+print(*team2, sep=', ')
